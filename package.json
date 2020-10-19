@@ -1,0 +1,51 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "This repo contains the server side project for the baba-spinasie web-app",
+  "main": "./dist/app.js",
+  "scripts": {
+    "start:dist": "nodemon ./dist/app.js",
+    "start:dev": "tsnd --respawn --no-notify ./src/app.ts",
+    "build": "rimraf ./dist && tsc",
+    "watch": "tsc -w",
+    "db:setup:test": "tsnd ./src/test-utils/setup",
+    "test": "npm run db:setup:test && jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RiaanLaubscher/baba-spinasie-server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RiaanLaubscher/baba-spinasie-server/issues"
+  },
+  "homepage": "https://github.com/RiaanLaubscher/baba-spinasie-server#readme",
+  "dependencies": {
+    "apollo-server-express": "^2.18.2",
+    "body-parser": "^1.19.0",
+    "class-validator": "^0.12.2",
+    "express": "^4.17.1",
+    "graphql": "^15.3.0",
+    "graphql-custom-types": "^1.6.0",
+    "graphql-query-complexity": "^0.7.0",
+    "pg": "^8.4.1",
+    "reflect-metadata": "^0.1.13",
+    "type-graphql": "^1.0.0",
+    "typeorm": "^0.2.28"
+  },
+  "devDependencies": {
+    "@types/bluebird": "^3.5.32",
+    "@types/express": "^4.17.8",
+    "@types/graphql": "^14.5.0",
+    "@types/node": "^14.11.8",
+    "@types/validator": "^13.1.0",
+    "apollo": "^2.31.0",
+    "nodemon": "^2.0.4",
+    "rimraf": "^3.0.2",
+    "ts-node-dev": "^1.0.0-pre.63",
+    "tslint": "^6.1.2",
+    "typescript": "^4.0.3"
+  }
+}
